@@ -1,0 +1,9 @@
+
+
+set(ENUM_EXEC Enum_Sol)
+
+set(ENUM_SRC Cercle.cpp Square.cpp Shape.cpp EnumSetup.cpp ${MAIN_SRC})
+
+add_executable(${ENUM_EXEC} ${ENUM_SRC})
+
+target_include_directories(${ENUM_EXEC} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/enums)
