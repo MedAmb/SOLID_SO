@@ -1,3 +1,6 @@
+#ifndef __ENUMSETUP_H__
+#define __ENUMSETUP_H__
+
 #include "ISetup.h"
 
 namespace SOLID{
@@ -7,7 +10,9 @@ namespace SOLID{
     class EnumSetup : public ISetup{
     public:
         explicit EnumSetup(std::function<int (int, int)> randomNumberGenerator) : ISetup(randomNumberGenerator) {}
-        std::vector<std::shared_ptr<Shape>> setup() override;
+        bool setup(std::vector<std::shared_ptr<Shape>>&) override;
+        bool draw(const std::shared_ptr<Shape>&) override;
     };
-
 }
+
+#endif

@@ -4,33 +4,31 @@
 #include <iostream>
 #include <chrono>
 
-
 int randomNumberGenerator(int min, int max)
 {
     return rand() % (max - min + 1) + min;
 }
 
-
 int main()
 {
 
-    std::vector<std::shared_ptr<Shape>> shapes;
+    std::vector<std::shared_ptr<SOLID::Shape>> shapes;
 
-    std::shared_ptr<ISetup> Setup = std::make_shared<ISetup>(EnumSetup(randomNumberGenerator));
+    auto Setup = std::make_shared<SOLID::EnumSetup>(randomNumberGenerator);
 
-    shapes = Setup->setup();
+    Setup->setup(shapes);
 
+    auto begin = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 
-    int begin = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
-
-    for(auto& shape : shapes)
+    for(int i = 0; i < 10000; ++i)
     {
-        shape->draw();
+        for (auto &shape : shapes)
+        {
+            Setup->draw(shape);
+        }
     }
 
-    int end = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+    auto end = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 
     std::cout << "Time: " << end - begin << "ms" << std::endl;
-
-
 }
