@@ -1,20 +1,28 @@
 {
     "Test_results": {
         "Enums": {
-            "Time": 27252,
-            "OCP_shapes" : 1,
-            "OCP_Operation" : 7,
-            "SRP" : 5,
-            "Complexity" : 5,
-            "performance" : 9
+            "Time": "~30s",
+            "OCP_shapes" : 1, // agreed
+            "OCP_Operation" : 7, // agreed
+            "SRP" : 5, // agreed 80% of the time
+            "Complexity" : 5, // agreed
+            "performance" : 9 // don't agree, maybe my benchmark is not good enough. i would give it a 7
         },
         "OOP": {
-            "Time": 28786,
-            "OCP_shapes" : 1,
-            "OCP_Operation" : 7,
-            "SRP" : 5,
-            "Complexity" : 5,
-            "performance" : 9
+            "Time": "~28s",
+            "OCP_shapes" : 8, // agreed
+            "OCP_Operation" : 2, // agreed
+            "SRP" : 2, // agreed
+            "Complexity" : 5, // don't agree from  usage point of view, it's easy to use.
+            "performance" : 6 // don't agree, maybe my benchmark is not good enough. i would give it a 8
+        },
+        "VSTR": {
+            "Time": "~42s",
+            "OCP_shapes" : 2,   // agreed
+            "OCP_Operation" : 8, // agreed
+            "SRP" : 8, // agreed
+            "Complexity" : 3, // agreed, not intuitive
+            "performance" : 1 // agreed, it's slow
         }
     }
 }

@@ -1,5 +1,5 @@
-#ifndef __ENUMSETUP_H__
-#define __ENUMSETUP_H__
+#ifndef __OOP_SETUP_H__
+#define __OOP_SETUP_H__
 
 #include "ISetup.h"
 

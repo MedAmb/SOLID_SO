@@ -38,3 +38,4 @@ set(MAIN_SRC ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
 
 add_subdirectory(enums)
 add_subdirectory(OOP)
+add_subdirectory(Visitor)

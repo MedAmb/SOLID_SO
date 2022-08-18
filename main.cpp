@@ -10,6 +10,11 @@ using SETUP = SOLID::EnumSetup;
 using SETUP = SOLID::OOPSetup;
 #endif
 
+#ifdef VSTOR
+#include "VisitorSetup.h"
+using SETUP = SOLID::VisitorSetup;
+#endif
+
 #include <iostream>
 #include <chrono>
 #include <vector>
