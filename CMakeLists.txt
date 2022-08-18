@@ -5,6 +5,7 @@ project(Shapes VERSION 1.0.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_VERBOSE_MAKEFILE TRUE)
 
 set(WARNING_OPTIONS
 -Werror
@@ -33,8 +34,7 @@ add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:${WARNING_OPTIONS}>")
 set(CMAKE_C_FLAGS_RELEASE "-O3 -Os -flto -DNDEBUG")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Os -flto -DNDEBUG")
 
-
 set(MAIN_SRC ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
 
-
 add_subdirectory(enums)
+add_subdirectory(OOP)

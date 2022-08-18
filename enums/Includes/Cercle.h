@@ -18,7 +18,7 @@ namespace SOLID
         int m_Radius;
     };
 
-    bool draw(std::shared_ptr<Cercle> const& cercle);
+    bool draw(Cercle const& cercle);
 }
 
 #endif

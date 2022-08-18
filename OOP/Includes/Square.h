@@ -8,18 +8,14 @@ namespace SOLID
     class Square : public Shape
     {
     public:
-        Square(int side) : Shape(SOLID::eShapeType::eSquare),
-                             m_Side(side)
-        {
-        }
+        Square(int side) : Shape(), m_Side(side) {}
         virtual ~Square() = default;
-        int getSide() const noexcept { return m_Side; }
-
+        bool draw() override;
     private:
         int m_Side;
     };
 
-    bool draw(Square const& square);
+
 }
 
 #endif

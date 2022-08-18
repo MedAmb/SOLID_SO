@@ -5,7 +5,7 @@
 
 namespace SOLID
 {
-    bool draw([[maybe_unused]] Cercle const& cercle)
+    bool Cercle::draw()
     {
         return true;
     }

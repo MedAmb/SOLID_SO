@@ -1,11 +1,11 @@
-#include "EnumSetup.h"
+#include "OOPSetup.h"
 
 #include "Cercle.h"
 #include "Square.h"
 
 namespace SOLID{
 
-    bool EnumSetup::setup(std::vector<std::shared_ptr<Shape>>& shapes)
+    bool OOPSetup::setup(std::vector<std::shared_ptr<Shape>>& shapes)
     {
         for(int i = 0; i < 1000; i++)
         {
@@ -24,18 +24,9 @@ namespace SOLID{
         return true;
     }
 
-    bool EnumSetup::draw(const std::shared_ptr<Shape>& shape) 
+    bool OOPSetup::draw(const std::shared_ptr<Shape>& shape) 
     {
-        if(shape->getType() == eShapeType::eCercle)
-        {
-            SOLID::draw(*static_cast<const Cercle *>(shape.get()));
-        }
-        else
-        {
-            SOLID::draw(*static_cast<const Square *>(shape.get()));
-        }
-
-        return true;
+        return shape->draw();
     }
 
 }

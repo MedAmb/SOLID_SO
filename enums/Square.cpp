@@ -5,9 +5,8 @@
 
 namespace SOLID
 {
-    bool draw(std::shared_ptr<Square> const& square)
+    bool draw([[maybe_unused]] Square const& square)
     {
-        std::cout << "Drawing a square with side " << square->getSide() << std::endl;
         return true;
     }
 }

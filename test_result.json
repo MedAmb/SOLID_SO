@@ -1,7 +1,20 @@
 {
     "Test_results": {
         "Enums": {
-            "Time": 52385
+            "Time": 27252,
+            "OCP_shapes" : 1,
+            "OCP_Operation" : 7,
+            "SRP" : 5,
+            "Complexity" : 5,
+            "performance" : 9
+        },
+        "OOP": {
+            "Time": 28786,
+            "OCP_shapes" : 1,
+            "OCP_Operation" : 7,
+            "SRP" : 5,
+            "Complexity" : 5,
+            "performance" : 9
         }
     }
 }

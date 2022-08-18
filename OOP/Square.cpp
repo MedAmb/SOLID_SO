@@ -1,11 +1,11 @@
 #include <iostream>
 #include <memory>
 
-#include "Cercle.h"
+#include "Square.h"
 
 namespace SOLID
 {
-    bool draw([[maybe_unused]] Cercle const& cercle)
+    bool Square::draw()
     {
         return true;
     }
