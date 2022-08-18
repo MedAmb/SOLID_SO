@@ -1,8 +1,6 @@
 #ifndef __SHAPE_H__
 #define __SHAPE_H__
 
-#define VSTOR
-
 namespace SOLID
 {
     class Visitor;
