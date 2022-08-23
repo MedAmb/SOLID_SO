@@ -4,10 +4,23 @@
 #include <vector>
 #include <memory>
 #include <functional>
+#ifdef VVSTOR
+#include <variant>
+#endif
 
+#ifndef NOSHAPE
 #include "Shape.h"
+#endif
+
+
 
 namespace SOLID{
+
+#ifdef VVSTOR
+    class Cercle;
+    class Square;
+    using Shape = std::variant<Cercle, Square>;
+#endif
     class ISetup{
     public:
         explicit ISetup(std::function<int (int, int)> randomNumberGenerator) : m_randomNumberGenerator(randomNumberGenerator) {}

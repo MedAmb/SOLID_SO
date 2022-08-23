@@ -1,5 +1,3 @@
-#include "Shape.h"
-
 #ifdef ENUM
 #include "EnumSetup.h"
 using SETUP = SOLID::EnumSetup;
@@ -13,6 +11,11 @@ using SETUP = SOLID::OOPSetup;
 #ifdef VSTOR
 #include "VisitorSetup.h"
 using SETUP = SOLID::VisitorSetup;
+#endif
+
+#ifdef VVSTOR
+#include "VariantVisitorSetup.h"
+using SETUP = SOLID::VariantVisitorSetup;
 #endif
 
 #include <iostream>
