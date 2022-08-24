@@ -15,6 +15,11 @@ using SETUP = SOLID::OOPSetup;
 using SETUP = SOLID::VisitorSetup;
 #endif
 
+#ifdef STG
+#include "StrategySetup.h"
+using SETUP = SOLID::StrategySetup;
+#endif
+
 #include <iostream>
 #include <chrono>
 #include <vector>

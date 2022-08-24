@@ -23,6 +23,14 @@
             "SRP" : 8, // agreed
             "Complexity" : 3, // agreed, not intuitive
             "performance" : 1 // agreed, it's slow
+        },
+        "STG": {
+            "Time": "~48s",
+            "OCP_shapes" : 8,   // agreed
+            "OCP_Operation" : 3, // agreed
+            "SRP" : 7, // agreed
+            "Complexity" : 7, // agreed
+            "performance" : 1 // agreed, it's slow
         }
     }
 }
